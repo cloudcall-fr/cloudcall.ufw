@@ -106,6 +106,7 @@ This is an example playbook:
       - { port: 80, rule: allow }
       - { from_ip: '127.0.0.1/8', comment: 'Allow localhost' }
       - { from_ip: '127.0.42.0/24', rule: deny }
+      - { from_ip: ['2.2.2.2','3.3.3.3'], rule: deny }
     ufw_default_forward_policy: ACCEPT
     ufw_logging: full
     ufw_applications:
