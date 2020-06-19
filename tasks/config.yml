@@ -29,7 +29,7 @@
       {% set _dummy = item.update({'from_ip':[ item.from_ip ]}) %}\
       {% endif %}\
       {% if item.from_ip is undefined %}\
-      {% set _dummy = item.update({'from_ip':[ '0.0.0.0/0' ]}) %}\
+      {% set _dummy = item.update({'from_ip':[ 'any' ]}) %}\
       {% endif %}\
       {% set a = a.append( item ) %}\
       {% endfor %}\
